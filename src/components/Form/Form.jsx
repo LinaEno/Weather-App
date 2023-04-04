@@ -1,18 +1,16 @@
-import axios from 'axios';
+import { getWeather, getWeatherFiveDays } from 'utils/Api';
 
 const Form = ({ setCurrent, setFiveDays, setDate }) => {
-  const getWeatherUseCityName = e => {
+  const getWeatherInfo = e => {
     e.preventDefault();
-    axios(
-      `https://api.openweathermap.org/data/2.5/weather?q=${e.target[0].value}&appid=c3ca235f299a5ac03a9b15b27ae3fee0`
-    )
+
+    getWeather(e.target[0].value)
       .then(({ data }) => setCurrent(data))
       .catch(() => alert('City is not found'));
 
-    axios(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${e.target[0].value}&appid=c3ca235f299a5ac03a9b15b27ae3fee0`
-    )
+    getWeatherFiveDays(e.target[0].value)
       .then(({ data }) => {
+        console.log(data);
         setFiveDays(data.list);
         setDate(data.list[0].dt_txt.slice(0, 10));
       })
@@ -21,7 +19,7 @@ const Form = ({ setCurrent, setFiveDays, setDate }) => {
   };
 
   return (
-    <form onSubmit={getWeatherUseCityName}>
+    <form onSubmit={getWeatherInfo}>
       <input placeholder="Write city" type="search" required />
       <button type="submit">Search</button>
     </form>

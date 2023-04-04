@@ -2,7 +2,10 @@ import { useEffect, useState } from 'react';
 import Header from './Header/Header';
 import MainSection from './MainSection/MainSection';
 import Form from './Form/Form';
-import axios from 'axios';
+import {
+  showWeatherInYourLocation,
+  showWeatherInYourLocationFiveDays,
+} from 'utils/Api';
 
 const App = () => {
   const [current, setCurrent] = useState({});
@@ -10,13 +13,9 @@ const App = () => {
   const [date, setDate] = useState('');
 
   function showPosition(position) {
-    axios(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=c3ca235f299a5ac03a9b15b27ae3fee0`
-    ).then(({ data }) => setCurrent(data));
+    showWeatherInYourLocation(position).then(({ data }) => setCurrent(data));
 
-    axios(
-      `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=c3ca235f299a5ac03a9b15b27ae3fee0`
-    ).then(({ data }) => {
+    showWeatherInYourLocationFiveDays(position).then(({ data }) => {
       setFiveDays(data.list);
       setDate(data.list[0].dt_txt.slice(0, 10));
     });
