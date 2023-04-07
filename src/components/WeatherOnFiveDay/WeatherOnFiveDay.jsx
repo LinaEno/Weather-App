@@ -1,8 +1,9 @@
 import React from 'react';
+import css from './Weather5.module.css'
 
 const WeatherOnFiveDay = ({ fiveDays, date }) => {
   return (
-    <div>
+    <div className={css.days__container}>
       {fiveDays
         .filter(item => item.dt_txt.includes(date))
         .map(item => (

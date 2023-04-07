@@ -11,7 +11,7 @@ export async function getWeather(search) {
 
 export async function getWeatherFiveDays(search) {
   const data = await axios.get(
-    `/forecast??q=${search}&appid=c3ca235f299a5ac03a9b15b27ae3fee0`
+    `/forecast?q=${search}&appid=c3ca235f299a5ac03a9b15b27ae3fee0`
   );
   console.log(data);
   return data;
