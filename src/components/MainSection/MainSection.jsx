@@ -3,17 +3,19 @@ import FiveDaysSection from 'components/FiveDaysSection/FiveDaysSection';
 import InfoList from 'components/InfoList/InfoList';
 import WeatherOnFiveDay from 'components/WeatherOnFiveDay/WeatherOnFiveDay';
 import css from './MainSection.module.css'
+import bgc from '../../images/Cloud.jpg'
+
 
 const MainSection = ({ current, fiveDays, date, setDate }) => {
   return (
     <section className={css.main__container}>
-      <dii className={css.container1}>
-        <div>
+      <div className={css.container1}>
+        <div className={css.container2} style={{ backgroundImage: `url(${bgc})` }}>
           <CityInfo current={current} />
           <InfoList current={current} />
         </div>
         <FiveDaysSection fiveDays={fiveDays} setDate={setDate} />
-      </dii>
+      </div>
       <WeatherOnFiveDay fiveDays={fiveDays} date={date} />
     </section>
   );

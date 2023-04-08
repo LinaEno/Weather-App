@@ -1,0 +1,30 @@
+.info__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+  @media screen and (min-width: 768px) {
+    .info__container {
+        flex-direction: row;
+    margin-top: 120px;
+
+    }
+  }
+
+  .info__item {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 5px;
+border-radius: 5px;
+width: 140px;
+padding: 10px;
+
+background: #6660C899;
+color: #E7E6FB;
+  }

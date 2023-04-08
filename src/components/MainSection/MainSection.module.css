@@ -1,27 +1,61 @@
 .main__container {
-    width: 100%;
-    padding: 0 10px;
-    margin: 0 auto;
-  }
-  
-  @media screen and (min-width: 480px) {
-    .main__container {
-      max-width: 480px;
-      padding: 0 20px;
-    }
-  }
-  @media screen and (min-width: 768px) {
-    .main__container {
-      max-width: 768px;
-      padding: 0 40px;
-    }
-  }
-  @media screen and (min-width: 1280px) {
-    .main__container {
-      max-width: 1280px;
-    }
-  }
+  padding: 0 20px 20px;
+  margin: 70px auto 0;
+}
 
-  .container1 {
-    display: flex;
+@media screen and (min-width: 480px) {
+  .main__container {
+    max-width: 440px;
   }
+}
+@media screen and (min-width: 768px) {
+  .main__container {
+    max-width: 688px;
+    padding: 0 40px 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main__container {
+    max-width: 1200px;
+  }
+}
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .container1 {
+    flex-direction: row;
+  }
+}
+
+.container2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  width: 260px;
+position: relative;
+
+}
+
+@media screen and (min-width: 480px) {
+  .container2 {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container2 {
+    padding: 20px;
+    width: 480px;
+  }
+}
