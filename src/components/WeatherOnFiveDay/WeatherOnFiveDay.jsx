@@ -7,7 +7,7 @@ const WeatherOnFiveDay = ({ fiveDays, date }) => {
       {fiveDays
         .filter(item => item.dt_txt.includes(date))
         .map(item => (
-          <div key={item.dt_txt}>
+          <div key={item.dt_txt} className={css.days__item}>
             <h3>{item.dt_txt.slice(11, 16)}</h3>
             <img
               src={`http://openweathermap.org/img/wn/${item.weather[0].icon}.png`}
@@ -15,7 +15,7 @@ const WeatherOnFiveDay = ({ fiveDays, date }) => {
             />
             <p>{(item.main.temp_max - 273.15).toFixed()}°C</p>
             <p>{(item.main.temp_min - 273.15).toFixed()}°C</p>
-            <p>{item.weather[0].description}</p>
+            <p className={css.days__description}>{item.weather[0].description}</p>
           </div>
         ))}
     </div>
