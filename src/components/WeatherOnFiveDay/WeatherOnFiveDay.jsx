@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './Weather5.module.css'
+import css from './Weather5.module.css';
 
 const WeatherOnFiveDay = ({ fiveDays, date }) => {
   return (
@@ -15,7 +15,9 @@ const WeatherOnFiveDay = ({ fiveDays, date }) => {
             />
             <p>{(item.main.temp_max - 273.15).toFixed()}°C</p>
             <p>{(item.main.temp_min - 273.15).toFixed()}°C</p>
-            <p className={css.days__description}>{item.weather[0].description}</p>
+            <p className={css.days__description}>
+              {item.weather[0].description}
+            </p>
           </div>
         ))}
     </div>
@@ -23,3 +25,24 @@ const WeatherOnFiveDay = ({ fiveDays, date }) => {
 };
 
 export default WeatherOnFiveDay;
+
+// import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
+{
+  /* <Tabs>
+  <TabList>
+    <Tab>
+      <Text>Gallery</Text>
+    </Tab>
+    <Tab>
+      <Text>Todos</Text>
+    </Tab>
+  </TabList>
+
+  <TabPanel>
+    <Gallery />
+  </TabPanel>
+  <TabPanel>
+    <Todos />
+  </TabPanel>
+</Tabs>; */
+}
