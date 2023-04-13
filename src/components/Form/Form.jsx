@@ -13,7 +13,6 @@ const Form = ({ setCurrent, setFiveDays, setDate }) => {
     getWeatherFiveDays(e.target[0].value)
       .then(({ data }) => {
         setFiveDays(data.list);
-        console.log(data);
         setDate(data.list[0].dt_txt.slice(0, 10));
       })
       .catch(() => alert('City is not found'));

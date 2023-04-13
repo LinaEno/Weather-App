@@ -3,7 +3,6 @@ import { FiThermometer, FiWind, FiCloudDrizzle } from 'react-icons/fi';
 import css from './InfoList.module.css';
 
 const InfoList = ({ current }) => {
-  console.log(current)
 
   return (
       <ul className={css.info__container}>
