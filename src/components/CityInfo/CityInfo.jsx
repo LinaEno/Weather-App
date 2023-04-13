@@ -26,16 +26,19 @@ const CityInfo = ({ current }) => {
         alt="Icon Weather"
       />
       <div className={css.city__geo}>
-        <p><FiClock size="13px"/> {cityTime()}</p>
-        <p><FiMapPin size="14px"/> {current.name}</p>
+        <p>
+          <FiClock size="13px" /> {cityTime()}
+        </p>
+        <p>
+          <FiMapPin size="14px" /> {current.name}
+        </p>
       </div>
       <div className={css.city__degree}>
-        <p className={css.degree__number}>{(current.main.temp - 273.15).toFixed()}<span className={css.degree__sign}>°C</span></p>
-        <p>
-            {/* {(current.main.temp - 273.15).toFixed()}° -  */}
-            feels like&#160; {(current.main.feels_like - 273.15).toFixed()}°
-          </p>
-        {/* <p>Today</p> */}
+        <p className={css.degree__number}>
+          {(current.main.temp - 273.15).toFixed()}
+          <span className={css.degree__sign}>°C</span>
+        </p>
+        <p>feels like&#160; {(current.main.feels_like - 273.15).toFixed()}°</p>
       </div>
     </div>
   );
