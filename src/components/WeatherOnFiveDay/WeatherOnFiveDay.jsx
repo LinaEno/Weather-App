@@ -7,15 +7,15 @@ const WeatherOnFiveDay = ({ fiveDays }) => {
   const dates = [...new Set(fiveDays.map(item => item.dt_txt.slice(0, 10)))];
 
   return (
-    <Tabs>
-      <TabList>
+    <Tabs className={css.reactTabs}>
+      <TabList className={css.reactTabList}>
         {dates.map(date => {
           const formattedDate = new Date(date).toDateString().slice(0, 11);
           return <Tab key={date}>{formattedDate}</Tab>;
         })}
       </TabList>
       {dates.map(date => (
-        <TabPanel key={date}>
+        <TabPanel key={date} style={{zIndex: 1}}>
           <div className={css.days__container}>
             {fiveDays
               .filter(item => item.dt_txt.includes(date))
