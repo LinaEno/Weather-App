@@ -1,6 +1,6 @@
 .main__container {
   padding: 0 20px 20px;
-  margin: 70px auto 0;
+  margin: 60px auto 0;
 }
 
 @media screen and (min-width: 480px) {
@@ -17,6 +17,8 @@
 @media screen and (min-width: 1280px) {
   .main__container {
     max-width: 1200px;
+    padding: 0 40px 0;
+
   }
 }
 
@@ -55,7 +57,7 @@ position: relative;
 }
 @media screen and (min-width: 768px) {
   .container2 {
-    padding: 20px;
+    padding: 19.86px 20px 20px;
     width: 430px;
   }
 }

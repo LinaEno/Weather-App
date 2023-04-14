@@ -1,6 +1,6 @@
 <aside>
             ⛅️Weather App⛈
-    This is a weather app that allows users to view the current weather conditions and forecast for any location. The app retrieves weather data from a third-party API and displays it in a user-friendly interface.
+    <p>This is a weather app that allows users to view the current weather conditions and forecast for any location. The app retrieves weather data from a third-party API and displays it in a user-friendly interface.</p>
     
             💡Features
     📌View current weather conditions, including temperature, wind speed, and humidity
@@ -8,7 +8,7 @@
     📌Search for weather information by city
     
             💡Usage
-    To use the app, simply enter the name of a city in the search bar and press enter. The app will retrieve the current weather conditions and forecast for that location and display them on the screen.
+    <p>To use the app, simply enter the name of a city in the search bar and press enter. The app will retrieve the current weather conditions and forecast for that location and display them on the screen.</p>
     
             💡Installation
     To install and run the app locally, follow these steps:
@@ -22,6 +22,7 @@
     📌CSS
     📌JavaScript
     📌React
+    📌React-Tabs
     📌Axios
     📌OpenWeatherMap API
     
